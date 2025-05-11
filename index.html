@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="index7.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="media7.css">
+
+</head>
+<body>
+<div class="main">
+	<div class="text"><h1>Get in Touch</h1></div>
+<form onsubmit="return data()">
+	<div class="row1">
+		<div class="element">
+			<input type="text" name="" placeholder="Your Name" class="name" id="d1">
+			<i class="fa-solid fa-circle-user i1"></i>
+		</div>
+		<div class="element">
+			<input type="tel" name="" placeholder="Your Phone" class="name" id="d2">
+			<i class="fa-solid fa-phone-volume i2"></i>
+		</div>
+		<div class="element">
+			<input type="email" name="" placeholder="Your Email" class="name" id="d3">
+			<i class="fa-regular fa-envelope i3"></i>
+		</div>
+	</div>
+	<div class="row2">
+		<div class="tarea">
+			<textarea cols="140" rows="8" placeholder="Message" id="d4"></textarea>
+			<i class="fa-solid fa-pen-to-square i4"></i>
+		</div>
+	</div>
+	<div class="row3"><button type="submit">Make An Request</button></div>
+	<div class="row4"><p>Designed And Devloped By Purajit Mondal <br>BCA (2ND SEM)<br>Mobile No- 8373002916 <br> Email Address - purajitmondal@gmail.com</p></div>
+	<script type="text/javascript">
+		function data() {
+		var a=document.getElementById('d1').value;
+		var b=document.getElementById('d2').value;
+		var c=document.getElementById('d3').value;
+		var d=document.getElementById('d4').value;
+
+		if(a=="" || b=="" || c=="" || d=="")
+		{
+			alert("All Fields are Mandatory");
+			return false;
+		}
+		else if (isNaN(b))
+		{
+        alert("Phone number must contain only numbers");
+        return false;
+        }
+        else if(b.length!=10)
+		{
+			alert("The Number Should Be 10 digit");
+			return false;
+		}
+		else
+		{
+			alert("Form submitted Successful. Thanks For your Precious time.");
+			alert("Thanks For Visit Purajit Mondal Website");
+			return true;
+		}
+	}
+	</script>
+</form>
+</div>
+</body>
+</html>
